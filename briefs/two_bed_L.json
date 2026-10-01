@@ -1,0 +1,182 @@
+{
+  "name": "Two-bedroom apartment, L-shaped 10 x 8 m",
+  "shell": {
+    "cell": 0.5,
+    "walls": [
+      [
+        0,
+        0,
+        6,
+        0
+      ],
+      [
+        6,
+        0,
+        6,
+        3
+      ],
+      [
+        6,
+        3,
+        10,
+        3
+      ],
+      [
+        10,
+        3,
+        10,
+        8
+      ],
+      [
+        10,
+        8,
+        0,
+        8
+      ],
+      [
+        0,
+        8,
+        0,
+        0
+      ]
+    ],
+    "entry": {
+      "side": "S",
+      "from": 4.0,
+      "to": 5.0
+    },
+    "window_sides": [
+      "N",
+      "E",
+      "W"
+    ]
+  },
+  "rooms": {
+    "hall": {
+      "min_width": 1.0,
+      "min_area": 0,
+      "share": [
+        0.03,
+        0.16
+      ]
+    },
+    "living": {
+      "min_width": 3.0,
+      "min_area": 14,
+      "share": [
+        0.24,
+        0.46
+      ],
+      "daylight": true
+    },
+    "kitchen": {
+      "min_width": 1.5,
+      "min_area": 3.5,
+      "share": [
+        0.08,
+        0.17
+      ]
+    },
+    "bedroom": {
+      "min_width": 2.5,
+      "min_area": 8,
+      "share": [
+        0.12,
+        0.2
+      ],
+      "daylight": true,
+      "count": 2
+    },
+    "bath": {
+      "min_width": 1.5,
+      "min_area": 3,
+      "share": [
+        0.05,
+        0.09
+      ]
+    },
+    "study": {
+      "min_width": 2.0,
+      "min_area": 5,
+      "share": [
+        0.09,
+        0.13
+      ],
+      "optional": true
+    },
+    "storage": {
+      "min_width": 1.0,
+      "min_area": 1,
+      "share": [
+        0.02,
+        0.05
+      ],
+      "optional": true
+    }
+  },
+  "entry_rooms": [
+    "hall",
+    "living"
+  ],
+  "doors": {
+    "living": [
+      "hall"
+    ],
+    "kitchen": [
+      "hall",
+      "living"
+    ],
+    "bedroom": [
+      "hall",
+      "living"
+    ],
+    "bath": [
+      "hall",
+      "bedroom"
+    ],
+    "study": [
+      "hall",
+      "living"
+    ],
+    "storage": [
+      "hall",
+      "bedroom",
+      "living"
+    ],
+    "hall": [
+      "living"
+    ]
+  },
+  "door_width": 1.0,
+  "window_min": 1.0,
+  "max_aspect": 3.0,
+  "open_pairs": [
+    [
+      "kitchen",
+      "living"
+    ]
+  ],
+  "taste": "A family with one child. They want two real bedrooms, a living room that feels like the heart of the home, and a bathroom reachable from the hall.",
+  "targets": {
+    "living_share": {
+      "goal": 0.38,
+      "width": 0.06,
+      "kind": "near"
+    },
+    "hall_share": {
+      "goal": 0.08,
+      "width": 0.03,
+      "kind": "near"
+    },
+    "max_aspect": {
+      "goal": 2.0,
+      "width": 0.4,
+      "kind": "below"
+    },
+    "daylight_share": {
+      "goal": 0.5,
+      "width": 0.1,
+      "kind": "above"
+    }
+  }
+}

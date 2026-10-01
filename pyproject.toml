@@ -1,0 +1,19 @@
+[project]
+name = "floorgen"
+version = "0.1.0"
+description = "Generate, filter, judge, select: floor plans from a wall outline"
+requires-python = ">=3.10"
+dependencies = ["ortools>=9.10", "numpy>=1.24", "pillow>=10"]
+
+[project.optional-dependencies]
+llm = ["anthropic>=1.0"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+floorgen = "floorgen.cli:main"
+
+[tool.setuptools]
+packages = ["floorgen"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
